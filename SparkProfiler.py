@@ -3,7 +3,7 @@ from pyspark import SparkContext, SparkConf, HiveContext
 from pyspark.sql import functions as f
 from pyspark.sql import col, when, count, countDistinct, to_date
 
-def get_stats(self,tablename,columns_to_exclude, df):
+def get_stats(tablename,columns_to_exclude, df):
     DF_ROWS_CNT = df.count()
 
     # getting NOT NULL values count for columns in dataframe
